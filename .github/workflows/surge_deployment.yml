@@ -1,14 +1,18 @@
 # This is a basic workflow to help you get started with Actions
-name: Deploy Website
+name: React App Deploy to Surge
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-on: [push]
+on: 
+   push:
+      branches: [ master ]
+   pull_request:
+      branches: [ master ]
 jobs:
    build:
     runs-on: ubuntu-latest
-    name: Deploying to surege
     steps:
     - uses: actions/checkout@v2
+  
     - name: Install NodeJS
     - uses: actions/setup-node@v2-beta
       with:
@@ -25,4 +29,4 @@ jobs:
       run: npm install --global surge
       
     - name: Deploy to Surge
-      run: surge ./build project003.surge.su ${{ secrests.SURGE_TOKEN}}          
+      run: surge ./build project003.surge.sh --token ${{ secrests.SURGE_TOKEN}}          
