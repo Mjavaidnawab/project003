@@ -3,7 +3,7 @@
 name: React App Deploy to Surge
 
 # Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# events but only for the master branch   .
 on:
   push:
     branches: [ master ]
@@ -38,4 +38,4 @@ jobs:
       run: npm install --global surge
 
     - name: Deploy to Surge
-      run: surge ./build project003-Javaid.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      run: surge ./build project003-first-react-app.surge.sh --token ${{ secrets.SURGE_TOKEN }}
