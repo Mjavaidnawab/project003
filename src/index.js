@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
 import App from './App';
+
 import * as serviceWorker from './serviceWorker';
 
+//ReactDOM.render(
+  //React.createElement('div',null,"Hellow world from create Element"),
+  //React.createElement('div',null,React.createElement('div',null,"Inner Child  div Element of Paren Div by React.CreateElement")),
+  //React.createElement('div',null,React.createElement('span',null,"Inner Child span Element of Paren Div by React.CreateElement")),
+  //document.getElementById('root')
+//);
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <div><App name = "Muhammad Javiad" age ={15 - 10}/>
+
+  </div>,
+
   document.getElementById('root')
 );
 
